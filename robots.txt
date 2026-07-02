@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saito-ringyo.co.jp/sitemap.xml
