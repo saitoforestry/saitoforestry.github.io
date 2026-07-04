@@ -637,6 +637,13 @@ h1, h2, h3, h4 {
     gap: 32px;
 }
 
+.grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+    align-items: center;
+}
+
 .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1707,8 +1714,10 @@ h1, h2, h3, h4 {
     #mobile-nav { display: flex; }
 
     .grid-3,
-    .grid-2 {
+    .grid-2,
+    .grid-2-col {
         grid-template-columns: 1fr;
+        gap: 32px;
     }
 
     .grid-4 { grid-template-columns: 1fr; }
