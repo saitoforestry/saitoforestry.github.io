@@ -4,21 +4,21 @@
 
 ## 主要ページ (Main Pages)
 
-- [ホーム (Home)](https://saito-ringyo.co.jp/)
+- [ホーム (Home)](https://saitoforestry.github.io/)
   - メインビジュアル、事業案内サマリー、お知らせ、アクセス案内、会社概要
-- [会社案内 (About)](https://saito-ringyo.co.jp/about/)
+- [会社案内 (About)](https://saitoforestry.github.io/about/)
   - 代表挨拶（齋藤啓）、会社概要、資格・認定（岩手県伐木技術指導員、合法木材供給事業者 G-135、林業労働力確保支援センター認定事業体）、取扱樹種一覧、アクセスマップ
-- [林業事業 (Forestry)](https://saito-ringyo.co.jp/forestry/)
+- [林業事業 (Forestry)](https://saitoforestry.github.io/forestry/)
   - 素材生産業、間伐、皆伐・再造林、森林整備・管理、技術研修指導の案内
-- [薪販売 (Firewood)](https://saito-ringyo.co.jp/firewood/)
+- [薪販売 (Firewood)](https://saitoforestry.github.io/firewood/)
   - 岩手産広葉樹（ミズナラ・ナラ・クリ等）の薪の特徴、サイズ・配送・現地引き取りについて、お見積り・注文用フォーム
-- [一枚板販売 (Slab Wood)](https://saito-ringyo.co.jp/slab/)
+- [一枚板販売 (Slab Wood)](https://saitoforestry.github.io/slab/)
   - 在庫をWeb上に羅列せず、用途・サイズ・樹種・予算の希望条件に合わせて最適な一枚をご提案する「コンシェルジュ販売」の案内と専用の条件入力フォーム
-- [ギャラリー (Gallery)](https://saito-ringyo.co.jp/gallery/)
+- [ギャラリー (Gallery)](https://saitoforestry.github.io/gallery/)
   - 山林の風景、伐採現場、薪や一枚板などの現場・製品写真
-- [よくある質問 (FAQ)](https://saito-ringyo.co.jp/faq/)
+- [よくある質問 (FAQ)](https://saitoforestry.github.io/faq/)
   - 薪、一枚板、配送・現地引き取り、お問い合わせに関するよくあるQ&A（FAQPage 構造化データ対応）
-- [お問い合わせ (Contact)](https://saito-ringyo.co.jp/contact/)
+- [お問い合わせ (Contact)](https://saitoforestry.github.io/contact/)
   - LINEでの直接相談窓口案内、および一般的なお問い合わせ用メールフォーム
 
 ## コンテンツ方針と特徴 (Content & E-E-A-T)
