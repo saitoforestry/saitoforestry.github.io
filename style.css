@@ -1339,6 +1339,32 @@ h1, h2, h3, h4 {
     line-height: 1.9;
 }
 
+.line-cta__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.line-cta__qr {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 6px;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .line-cta__row {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .line-cta__qr {
+        width: 88px;
+        height: 88px;
+    }
+}
+
 .btn--line-white {
     background: var(--white);
     color: #06C755;
@@ -1759,4 +1785,269 @@ h1, h2, h3, h4 {
     .footer-bottom { flex-direction: column; text-align: center; }
 
     .float-line { bottom: 20px; right: 20px; }
+}
+
+/* ===== Firewood guide additions ===== */
+.toc-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+}
+
+.toc-pills a {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--forest-mid);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background var(--speed-fast, 0.2s) var(--ease), color var(--speed-fast, 0.2s) var(--ease);
+}
+
+.toc-pills a:hover {
+    background: var(--forest);
+    color: var(--white);
+    border-color: var(--forest);
+}
+
+.wood-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 720px) {
+    .wood-compare { grid-template-columns: 1fr; }
+}
+
+.wood-compare__card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+}
+
+.wood-compare__card h3 {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--forest);
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+}
+
+.wood-compare__card ul {
+    margin: 12px 0;
+    padding-left: 1.2em;
+    color: var(--text-mid);
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.step-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 860px) {
+    .step-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .step-list { grid-template-columns: 1fr; }
+}
+
+.step-list__item {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 22px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.step-list__num {
+    display: inline-block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.8rem;
+    color: var(--wood);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.step-list__title {
+    font-weight: 500;
+    color: var(--forest);
+    margin-bottom: 8px;
+}
+
+.step-list__text {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+}
+
+.warning-box {
+    background: #fff8ef;
+    border: 1px solid #e8cf9e;
+    border-left: 4px solid var(--wood);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+}
+
+.warning-box h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: var(--wood-dark);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.warning-box p, .warning-box ul {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+}
+
+.warning-box ul { padding-left: 1.2em; }
+
+.storage-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.storage-list__item {
+    background: var(--forest-pale);
+    border-radius: 12px;
+    padding: 22px 20px;
+}
+
+.storage-list__item h3 {
+    font-size: 0.98rem;
+    color: var(--forest);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.storage-list__item p {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+}
+
+.event-banner {
+    background: linear-gradient(135deg, var(--wood-dark), var(--wood));
+    color: var(--white);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--shadow-wood);
+}
+
+.event-banner__label {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    opacity: 0.85;
+    text-transform: uppercase;
+}
+
+.event-banner__title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.4rem;
+    margin: 8px 0 16px;
+}
+
+.event-banner__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    margin: 18px 0;
+    font-size: 0.9rem;
+}
+
+.event-banner__meta strong { display: block; font-size: 0.72rem; opacity: 0.8; font-weight: 400; }
+
+.event-banner table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.88rem;
+}
+
+.event-banner table th, .event-banner table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    vertical-align: top;
+}
+
+.event-banner table th {
+    width: 30%;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.event-banner__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.event-banner .btn, .event-banner .btn--line-white {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+    .u-pc { display: none; }
+}
+
+/* ===== Hero brand mark (SAITO FORESTRY) ===== */
+.hero__brandmark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: clamp(3.2rem, 14vw, 11rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: rgba(255,255,255,0.14);
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+    user-select: none;
+}
+
+@media (min-width: 1100px) {
+    .hero__brandmark { white-space: nowrap; }
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fade-up, .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .hero__bg, #hero:hover .hero__bg {
+        transition: none !important;
+        transform: none !important;
+    }
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
 }
