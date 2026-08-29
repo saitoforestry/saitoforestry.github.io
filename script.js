@@ -109,6 +109,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // -----------------------------------------------
+    // 6b. 薪ページ「薪を知る」アコーディオン
+    // -----------------------------------------------
+    document.querySelectorAll('.kb-question').forEach(btn => {
+        const item = btn.closest('.kb-item');
+        const answer = item.querySelector('.kb-answer');
+
+        // 初期状態（open クラス付きの項目のみ最初から展開）
+        if (item.classList.contains('open')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+
+        btn.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.kb-item.open').forEach(openItem => {
+                openItem.classList.remove('open');
+                openItem.querySelector('.kb-question').setAttribute('aria-expanded', 'false');
+                openItem.querySelector('.kb-answer').style.maxHeight = '0';
+            });
+
+            // Open clicked (if was closed)
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+
+    // ハッシュ付きアクセス時（例: firewood/#stove）は該当項目を開いて自動スクロール
+    if (location.hash) {
+        const target = document.querySelector('.kb-item' + location.hash);
+        if (target) {
+            document.querySelectorAll('.kb-item.open').forEach(openItem => {
+                openItem.classList.remove('open');
+                openItem.querySelector('.kb-question').setAttribute('aria-expanded', 'false');
+                openItem.querySelector('.kb-answer').style.maxHeight = '0';
+            });
+            target.classList.add('open');
+            const q = target.querySelector('.kb-question');
+            const a = target.querySelector('.kb-answer');
+            q.setAttribute('aria-expanded', 'true');
+            a.style.maxHeight = a.scrollHeight + 'px';
+            setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+        }
+    }
+
+    // -----------------------------------------------
     // 7. Contact & Slab form validation
     // -----------------------------------------------
     const forms = document.querySelectorAll('form[data-validate]');

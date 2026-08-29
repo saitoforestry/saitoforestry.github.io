@@ -1314,6 +1314,24 @@ h1, h2, h3, h4 {
     border: none;
 }
 
+.map-link {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.map-link a {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--forest-mid);
+    border-bottom: 1px solid var(--forest-mid);
+    padding-bottom: 2px;
+}
+
+.map-link a:hover {
+    color: var(--wood);
+    border-color: var(--wood);
+}
+
 /* =============================================
    LINE CTA
    ============================================= */
@@ -2010,28 +2028,6 @@ h1, h2, h3, h4 {
     .u-pc { display: none; }
 }
 
-/* ===== Hero wordmark (SAITO FORESTRY) ===== */
-.hero__wordmark {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
-    letter-spacing: 0.14em;
-    color: var(--white);
-    margin-bottom: 18px;
-    position: relative;
-    padding-bottom: 18px;
-}
-
-.hero__wordmark::after {
-    content: '';
-    position: absolute;
-    left: 2px;
-    bottom: 0;
-    width: 56px;
-    height: 2px;
-    background: var(--wood-light);
-}
-
 /* ===== Reduced motion ===== */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -2049,4 +2045,121 @@ h1, h2, h3, h4 {
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
     }
+}
+
+/* ===== Firewood "薪を知る" knowledge accordion ===== */
+.kb-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kb-item {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s var(--ease);
+}
+
+.kb-item.open {
+    box-shadow: var(--shadow-md);
+    border-color: var(--forest-pale);
+}
+
+.kb-question {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 20px 24px;
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: none;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.kb-question:hover {
+    background: var(--forest-pale);
+}
+
+.kb-q-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    width: 28px;
+    text-align: center;
+}
+
+.kb-question__text {
+    flex: 1;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--forest);
+    letter-spacing: 0.02em;
+}
+
+.kb-toggle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--forest-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s var(--ease);
+    color: var(--forest);
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.kb-item.open .kb-toggle {
+    background: var(--forest);
+    color: var(--white);
+    transform: rotate(45deg);
+}
+
+.kb-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease);
+}
+
+.kb-answer__inner {
+    padding: 0 24px 28px 68px;
+    font-size: 0.92rem;
+    color: var(--text-mid);
+    line-height: 1.9;
+}
+
+.kb-answer__inner > p {
+    margin-bottom: 16px;
+}
+
+.kb-lead {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    color: var(--forest);
+    font-weight: 500;
+    margin-bottom: 12px !important;
+}
+
+.strength-list--kb {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.strength-list--kb .strength-item {
+    background: var(--forest-pale);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 640px) {
+    .kb-answer__inner { padding-left: 24px; }
+    .strength-list--kb { grid-template-columns: 1fr; }
 }
