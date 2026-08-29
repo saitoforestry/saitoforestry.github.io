@@ -907,7 +907,10 @@ h1, h2, h3, h4 {
    PAGE HERO (inner pages)
    ============================================= */
 .page-hero {
-    background: var(--forest);
+    background-color: var(--forest);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
@@ -918,9 +921,14 @@ h1, h2, h3, h4 {
     content: '';
     position: absolute;
     inset: 0;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
+    background: linear-gradient(135deg, rgba(26,58,42,0.55) 0%, rgba(26,58,42,0.3) 100%);
+}
+
+@media (max-width: 640px) {
+    .page-hero {
+        padding: 90px 0 56px;
+        background-size: cover;
+    }
 }
 
 .page-hero__content {
@@ -1394,6 +1402,19 @@ h1, h2, h3, h4 {
     align-items: center;
     gap: 10px;
     transition: all 0.3s var(--ease);
+}
+
+@media (max-width: 480px) {
+    .btn--line-white {
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 20px;
+        font-size: 0.9rem;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+        line-height: 1.4;
+    }
 }
 
 .btn--line-white:hover {
