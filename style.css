@@ -908,7 +908,7 @@ h1, h2, h3, h4 {
    ============================================= */
 .page-hero {
     background-color: var(--forest);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 120px 0 80px;
@@ -927,7 +927,6 @@ h1, h2, h3, h4 {
 @media (max-width: 640px) {
     .page-hero {
         padding: 90px 0 56px;
-        background-size: cover;
     }
 }
 
