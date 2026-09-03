@@ -2,3 +2,6 @@
 Thumbs.db
 *.log
 /tmp/
+
+# Productionでは使用しない制作素材・旧データ（ローカル保管）
+/_archive/
