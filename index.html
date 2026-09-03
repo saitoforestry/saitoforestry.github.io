@@ -1,473 +1,244 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>株式会社齋藤林業｜岩手の森から生まれる価値を、次の世代へ。</title>
-    <meta name="description" content="岩手県一関市の株式会社齋藤林業。25年以上の林業実績を持つ代表・齋藤啓が手掛ける素材生産・薪販売・一枚板のコンシェルジュ型オーダー販売。合法木材供給事業者（G-135）認定。">
-    <meta name="keywords" content="齋藤林業,一関市,薪販売,一枚板,林業,岩手,素材生産,無垢板,木材,ケヤキ,ミズナラ,クリ">
-    <link rel="canonical" href="https://saitoforestry.github.io/">
-
-    <!-- OGP -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="株式会社齋藤林業｜森から生まれる価値を、次の世代へ。">
-    <meta property="og:description" content="岩手県一関市の林業会社。薪販売・一枚板コンシェルジュ・素材生産。25年の現場経験と合法木材認定。">
-    <meta property="og:url" content="https://saitoforestry.github.io/">
-    <meta property="og:site_name" content="株式会社齋藤林業">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="https://saitoforestry.github.io/assets/images/hero.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="株式会社齋藤林業｜森から生まれる価値を、次の世代へ。">
-    <meta name="twitter:description" content="岩手県一関市の林業会社。薪販売・一枚板コンシェルジュ・素材生産。25年の現場経験と合法木材認定。">
-    <meta name="twitter:image" content="https://saitoforestry.github.io/assets/images/hero.jpg">
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- 構造化データ：Organization + LocalBusiness -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": ["Organization", "LocalBusiness"],
-      "name": "株式会社齋藤林業",
-      "alternateName": ["齋藤林業", "SAITO FORESTRY Co., Ltd."],
-      "url": "https://saitoforestry.github.io/",
-      "description": "岩手県一関市の林業会社。素材生産業、薪の製造・販売、一枚板オーダー販売を手掛ける。",
-      "legalName": "株式会社齋藤林業",
-      "foundingDate": "2017-05-16",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "狐禅寺川口",
-        "addressLocality": "一関市",
-        "addressRegion": "岩手県",
-        "postalCode": "029-0131",
-        "addressCountry": "JP"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 38.9195,
-        "longitude": 141.1215
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "齋藤 啓",
-        "alternateName": "さいとう ひらく",
-        "jobTitle": "代表取締役"
-      },
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "岩手県伐木技術指導員（認定番号：1-4）" },
-        { "@type": "EducationalOccupationalCredential", "name": "合法木材供給事業者（G-135）" }
-      ]
-    }
-    </script>
-
-    <!-- Form message styles -->
-    <style>
-        .form-message {
-            margin-top: 20px;
-            padding: 16px 20px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-        .form-message--success {
-            background: #e8f5e9;
-            color: #2e7d32;
-            border: 1px solid #a5d6a7;
-        }
-        .form-message--error {
-            background: #fce4ec;
-            color: #c62828;
-            border: 1px solid #ef9a9a;
-        }
-        .form-input.error,
-        .form-select.error,
-        .form-textarea.error {
-            border-color: #c62828;
-            box-shadow: 0 0 0 3px rgba(198,40,40,0.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社齋藤林業｜岩手の森から生まれる価値を、次の世代へ。</title>
+  <meta name="description" content="岩手県一関市の株式会社齋藤林業。素材生産・薪販売・一枚板のコンシェルジュ販売。25年以上の現場経験で、岩手の森の価値を未来へつなぎます。">
+  <meta name="theme-color" content="#090b0a">
+  <link rel="canonical" href="https://saitoforestry.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="株式会社齋藤林業｜森から生まれる価値を、次の世代へ。">
+  <meta property="og:description" content="伐ることは、育てること。岩手県一関市で森と人の未来をつなぐ林業会社です。">
+  <meta property="og:url" content="https://saitoforestry.github.io/">
+  <meta property="og:site_name" content="株式会社齋藤林業">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://saitoforestry.github.io/assets/images/poster-hero-forest.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="preload" as="image" href="assets/images/poster-hero-forest.jpg">
+  <link rel="stylesheet" href="style.css?v=20260903c">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":["Organization","LocalBusiness"],"name":"株式会社齋藤林業","alternateName":["齋藤林業","SAITO FORESTRY Co., Ltd."],"url":"https://saitoforestry.github.io/","description":"岩手県一関市の林業会社。素材生産業、薪の製造・販売、一枚板オーダー販売を手掛ける。","foundingDate":"2017-05-16","address":{"@type":"PostalAddress","streetAddress":"狐禅寺川口","addressLocality":"一関市","addressRegion":"岩手県","postalCode":"029-0131","addressCountry":"JP"},"founder":{"@type":"Person","name":"齋藤 啓","jobTitle":"代表取締役"}}
+  </script>
 </head>
+<body class="home-new">
+  <a class="skip-link" href="#main">本文へ移動</a>
 
-<body>
+  <header id="header" class="new-header">
+    <div class="new-header__inner">
+      <a href="/" class="new-brand" aria-label="株式会社齋藤林業 トップページ">
+        <img src="assets/images/logo2.png" alt="" width="54" height="54">
+        <span><b>齋藤林業</b><small>SAITO FORESTRY</small></span>
+      </a>
+      <nav id="gnav" class="new-nav" aria-label="グローバルナビゲーション">
+        <a href="about/">私たちについて</a>
+        <a href="forestry/">林業事業</a>
+        <a href="firewood/">薪</a>
+        <a href="slab/">一枚板</a>
+        <a href="gallery/">風景</a>
+        <a href="contact/" class="new-nav__contact">相談する <span>↗</span></a>
+      </nav>
+      <button class="hamburger new-menu" id="hamburger" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
 
-<!-- ============ FLOATING LINE BUTTON ============ -->
-<div class="float-line">
-    <a href="https://lin.ee/SUqpcm6" class="float-line__btn" target="_blank" rel="noopener" aria-label="LINEでお問い合わせ">
-        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 4C12.95 4 4 12.28 4 22.5c0 7.08 4.34 13.27 10.8 16.78-.47 1.76-1.7 6.35-1.94 7.34-.3 1.23.45 1.22 1.02.88.44-.26 7.1-4.82 9.98-6.77.7.1 1.41.15 2.14.15 11.05 0 20-8.28 20-18.5S35.05 4 24 4z"/>
-        </svg>
-    </a>
-    <span class="float-line__label">LINE</span>
-</div>
+  <nav id="mobile-nav" class="new-mobile-nav" aria-label="モバイルナビゲーション">
+    <span class="eyebrow">MENU / SAITO FORESTRY</span>
+    <a href="about/"><span>01</span> 私たちについて</a>
+    <a href="forestry/"><span>02</span> 林業事業</a>
+    <a href="firewood/"><span>03</span> 薪販売</a>
+    <a href="slab/"><span>04</span> 一枚板</a>
+    <a href="gallery/"><span>05</span> ギャラリー</a>
+    <a href="contact/"><span>06</span> お問い合わせ</a>
+  </nav>
 
-<!-- ============ HEADER ============ -->
-<header id="header" style="background: rgba(26,58,42,0.0);">
-    <div class="container">
-        <a href="/" class="site-logo" aria-label="株式会社齋藤林業 トップページへ">
-            <img src="assets/images/logo2.png" alt="株式会社齋藤林業 ロゴ" class="site-logo__img" style="height:44px;">
-            <div class="site-logo__text">
-                <span class="site-logo__ja">株式会社齋藤林業</span>
-                <span class="site-logo__en">Saito Forestry Co., Ltd.</span>
-            </div>
+  <main id="main">
+    <section class="new-hero" aria-label="齋藤林業 メインビジュアル">
+      <video class="media-cover" autoplay muted loop playsinline preload="metadata" poster="assets/images/poster-hero-forest.jpg">
+        <source src="assets/video/hero-forest.mp4" type="video/mp4">
+      </video>
+      <div class="new-hero__shade"></div>
+      <div class="new-hero__content">
+        <p class="eyebrow reveal">IWATE / ICHINOSEKI — 38.93°N 141.13°E</p>
+        <h1 class="reveal">森を読み、<br><em>未来を伐り拓く。</em></h1>
+        <p class="hero-concept reveal">ROOTED IN IWATE. CRAFTED FOR THE FUTURE.</p>
+        <div class="new-hero__bottom reveal">
+          <p>山の時間と、人の暮らしをつなぐ。<br>私たちは岩手の森に生きる林業会社です。</p>
+          <a class="circle-link" href="#philosophy" aria-label="私たちの思想へスクロール"><span>SCROLL</span><b>↓</b></a>
+        </div>
+      </div>
+      <p class="new-hero__side">SAITO FORESTRY CO., LTD. / SINCE 2017</p>
+    </section>
+
+    <section id="philosophy" class="editorial-intro dark-section">
+      <div class="editorial-intro__meta reveal">
+        <p class="eyebrow">OUR PHILOSOPHY</p>
+        <p>01 — 山を知る<br>02 — 木を活かす<br>03 — 次代へつなぐ</p>
+      </div>
+      <div class="editorial-intro__copy">
+        <p class="display-copy reveal">伐ることは、<br><em>育てること。</em></p>
+        <p class="body-copy reveal">木を伐り、運び、活かす。その一つひとつに森の未来への責任があります。25年以上、岩手の山と向き合ってきた目と技で、木が持つ価値を余すことなく次の暮らしへ届けます。</p>
+        <a href="about/" class="text-link reveal">齋藤林業について <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="services-gallery dark-section" aria-labelledby="business-heading">
+      <div class="gallery-heading reveal">
+        <p class="eyebrow">OUR BUSINESS / 01—03</p>
+        <h2 id="business-heading">森から、暮らしへ。</h2>
+      </div>
+
+      <article class="business-panel business-panel--wide reveal">
+        <a href="forestry/" aria-label="林業事業を詳しく見る">
+          <video class="media-cover" autoplay muted loop playsinline preload="none" poster="assets/images/poster-tile-forestry.jpg">
+            <source src="assets/video/tile-forestry.mp4" type="video/mp4">
+          </video>
+          <div class="business-panel__wash"></div>
+          <div class="business-panel__top"><span>01</span><span>FORESTRY</span></div>
+          <div class="business-panel__body"><h3>山を整え、<br>森を循環させる。</h3><p>立木の伐採・搬出から造林まで。安全と技術を礎に、健やかな森林経営を支えます。</p></div>
+          <span class="panel-arrow">↗</span>
         </a>
-        <nav id="gnav" aria-label="グローバルナビゲーション">
-            <ul>
-                <li><a href="about/">会社案内</a></li>
-                <li><a href="forestry/">林業事業</a></li>
-                <li><a href="firewood/">薪販売</a></li>
-                <li><a href="slab/">一枚板</a></li>
-                <li><a href="gallery/">ギャラリー</a></li>
-                <li><a href="contact/" class="btn-line">
-                    <svg width="16" height="16" viewBox="0 0 48 48" fill="white"><path d="M24 4C12.95 4 4 12.28 4 22.5c0 7.08 4.34 13.27 10.8 16.78-.47 1.76-1.7 6.35-1.94 7.34-.3 1.23.45 1.22 1.02.88.44-.26 7.1-4.82 9.98-6.77.7.1 1.41.15 2.14.15 11.05 0 20-8.28 20-18.5S35.05 4 24 4z"/></svg>
-                    お問い合わせ
-                </a></li>
-            </ul>
-        </nav>
-        <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
+      </article>
+
+      <div class="business-pair">
+        <article class="business-panel business-panel--warm reveal">
+          <a href="firewood/" aria-label="薪販売を詳しく見る">
+            <img class="media-cover" src="assets/images/photo-axe-firewood.jpg" alt="斧と薪が伝える、火のある暮らし" loading="lazy">
+            <div class="business-panel__wash"></div>
+            <div class="business-panel__top"><span>02</span><span>FIREWOOD</span></div>
+            <div class="business-panel__body"><h3>火のある時間を、<br>岩手の木から。</h3><p>よく乾いた広葉樹薪を、岩手県南から宮城県北へ。</p></div>
+            <span class="panel-arrow">↗</span>
+          </a>
+        </article>
+        <article class="business-panel business-panel--violet reveal">
+          <a href="slab/" aria-label="一枚板販売を詳しく見る">
+            <video class="media-cover" autoplay muted loop playsinline preload="none" poster="assets/images/poster-tile-slab.jpg">
+              <source src="assets/video/tile-slab.mp4" type="video/mp4">
+            </video>
+            <div class="business-panel__wash"></div>
+            <div class="business-panel__top"><span>03</span><span>ONE-PIECE SLAB</span></div>
+            <div class="business-panel__body"><h3>木の個性を、<br>一枚の景色に。</h3><p>用途・サイズ・樹種・予算から、世界に一枚の木との出会いをご提案します。</p></div>
+            <span class="panel-arrow">↗</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="light-statement">
+      <video class="media-cover" autoplay muted loop playsinline preload="none" poster="assets/images/poster-statement-light.jpg">
+        <source src="assets/video/statement-light.mp4" type="video/mp4">
+      </video>
+      <div class="light-statement__shade"></div>
+      <div class="light-statement__content reveal">
+        <p class="eyebrow">THE EYE FOR WOOD</p>
+        <blockquote>一本ごとに違う、<br>木の声を聴く。</blockquote>
+        <p>丸太の段階で質を見極め、最もふさわしい形で活かす。経験だけが育てる目利きが、私たちの仕事の原点です。</p>
+      </div>
+    </section>
+
+    <section class="proof dark-section" aria-labelledby="proof-heading">
+      <div class="proof__image reveal"><img src="assets/images/photo-chainsaw-brand.png" alt="森の現場で切り株に置かれたチェーンソー" loading="lazy"></div>
+      <div class="proof__content">
+        <p class="eyebrow reveal">CRAFT / TRUST / TRACEABILITY</p>
+        <h2 id="proof-heading" class="reveal">技術と信頼を、<br>一本の木に。</h2>
+        <div class="proof__stats reveal">
+          <div class="proof-stat" tabindex="0">
+            <strong>25<small>+</small></strong><span>YEARS<br>現場経験</span>
+            <p class="proof-stat__detail">個人事業主時代から25年以上。岩手の山で培った経験が、木の状態と価値を見極めます。</p>
+          </div>
+          <div class="proof-stat" tabindex="0">
+            <strong>15<small>+</small></strong><span>SPECIES<br>取扱樹種</span>
+            <p class="proof-stat__detail">ミズナラ、ケヤキ、クリ、クルミなど、岩手で育った多様な樹種を取り扱っています。</p>
+          </div>
+          <a class="proof-stat proof-stat--link" href="https://www.goho-wood.jp/nintei_system/user/list.php?group_id=74" target="_blank" rel="noopener noreferrer" aria-label="合法木材供給事業者 G-135 認定一覧を開く">
+            <strong>G-135</strong><span>LEGAL WOOD<br>合法木材認定</span>
+            <p class="proof-stat__detail">合法性と持続可能性が確認された木材を供給。産地の見える、確かな素材を届けます。</p>
+          </a>
+          <div class="proof-stat" tabindex="0">
+            <strong>1—4</strong><span>CERTIFIED<br>伐木技術指導員</span>
+            <p class="proof-stat__detail">岩手県第1期認定者9名の一人。安全で高度な伐木技術と指導力を現場に活かしています。</p>
+          </div>
+        </div>
+        <p class="proof__note reveal">山から製品までを見届ける一貫体制。産地が見える木材を、明瞭な価格と確かな説明でお届けします。</p>
+        <a href="about/" class="button-light reveal">私たちの技術と認定を見る <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="immersion" aria-label="森の風景">
+      <video class="media-cover" autoplay muted loop playsinline preload="none" poster="assets/images/poster-immersion-fog.jpg">
+        <source src="assets/video/immersion-fog.mp4" type="video/mp4">
+      </video>
+      <div class="immersion__shade"></div>
+      <div class="immersion__content reveal">
+        <p class="eyebrow">A FOREST IS NOT A RESOURCE.<br>IT IS A PROMISE.</p>
+        <h2>森は資源ではなく、<br><em>未来との約束。</em></h2>
+      </div>
+    </section>
+
+    <section class="visual-journal dark-section" aria-labelledby="journal-heading">
+      <div class="journal-head reveal">
+        <div><p class="eyebrow">FIELD NOTES / IWATE</p><h2 id="journal-heading">森の記憶。</h2></div>
+        <a href="gallery/" class="text-link">すべての風景を見る <span>↗</span></a>
+      </div>
+      <div class="journal-grid">
+        <figure class="journal-item journal-item--video reveal"><video class="media-cover" autoplay muted loop playsinline preload="none" poster="assets/images/poster-gallery-trail.jpg"><source src="assets/video/gallery-trail.mp4" type="video/mp4"></video><figcaption><span>01 / TRAIL</span><span>森へ入る</span></figcaption></figure>
+        <figure class="journal-item reveal"><img class="media-cover" src="assets/images/photo-felling.jpg" alt="伐木作業の現場" loading="lazy"><figcaption><span>02 / FELLING</span><span>木と向き合う</span></figcaption></figure>
+        <figure class="journal-item reveal"><img class="media-cover" src="assets/images/photo-lightrays.jpg" alt="木々の間から差し込む光" loading="lazy"><figcaption><span>03 / LIGHT</span><span>森を読む</span></figcaption></figure>
+        <figure class="journal-item reveal"><img class="media-cover" src="assets/images/photo-canopy.jpg" alt="見上げた森の樹冠" loading="lazy"><figcaption><span>04 / CANOPY</span><span>次へつなぐ</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="new-access dark-section" aria-labelledby="access-heading">
+      <div class="new-access__intro reveal">
+        <p class="eyebrow">OUR PLACE / ICHINOSEKI, IWATE</p>
+        <h2 id="access-heading">岩手の森と、<br><em>暮らしをつなぐ。</em></h2>
+        <div class="new-access__details">
+          <p><span>BASE</span>〒029-0131<br>岩手県一関市狐禅寺川口</p>
+          <p><span>VISIT</span>現地引き取り・ご来場は<br>事前のご予約をお願いします。</p>
+        </div>
+        <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B2%A9%E6%89%8B%E7%9C%8C%E4%B8%80%E9%96%A2%E5%B8%82%E7%8B%90%E7%A6%85%E5%AF%BA%E5%B7%9D%E5%8F%A3" target="_blank" rel="noopener noreferrer">OPEN IN GOOGLE MAPS <span>↗</span></a>
+      </div>
+      <div class="new-access__map reveal">
+        <iframe
+          src="https://www.google.com/maps?q=%E5%B2%A9%E6%89%8B%E7%9C%8C%E4%B8%80%E9%96%A2%E5%B8%82%E7%8B%90%E7%A6%85%E5%AF%BA%E5%B7%9D%E5%8F%A3&amp;z=13&amp;output=embed"
+          title="株式会社齋藤林業 所在地マップ"
+          loading="lazy"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <p><span>38.9195° N</span><span>141.1215° E</span></p>
+      </div>
+    </section>
+
+    <section class="new-contact">
+      <div class="new-contact__copy reveal">
+        <p class="eyebrow">START A CONVERSATION</p>
+        <h2>木のこと、森のこと。<br><em>お気軽にご連絡を。</em></h2>
+        <p>薪のご注文、一枚板のご相談、立木・伐採について。写真や寸法をLINEで送っていただければ、担当者が直接お答えします。</p>
+      </div>
+      <div class="new-contact__actions reveal">
+        <a href="contact/" class="contact-secondary"><span>お問い合わせフォーム</span><b>↗</b></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="new-footer">
+    <div class="new-footer__top">
+      <a href="/" class="new-brand new-brand--footer"><img src="assets/images/logo2.png" alt="" width="64" height="64"><span><b>齋藤林業</b><small>SAITO FORESTRY</small></span></a>
+      <p>岩手県一関市狐禅寺川口<br><a class="certification-link" href="https://www.goho-wood.jp/nintei_system/user/list.php?group_id=74" target="_blank" rel="noopener noreferrer">合法木材供給事業者 G-135 ↗</a></p>
     </div>
-</header>
-
-<!-- Mobile Nav -->
-<nav id="mobile-nav" aria-label="モバイルナビゲーション">
-    <a href="about/">会社案内</a>
-    <a href="forestry/">林業事業</a>
-    <a href="firewood/">薪販売</a>
-    <a href="slab/">一枚板</a>
-    <a href="gallery/">ギャラリー</a>
-    <a href="faq/">よくある質問</a>
-    <a href="contact/">お問い合わせ</a>
-</nav>
-
-<main>
-
-    <!-- ============ HERO ============ -->
-    <section id="hero" aria-label="メインビジュアル">
-        <div class="hero__bg" style="background-image: url('assets/images/hero.jpg');"></div>
-        <div class="hero__overlay"></div>
-        <div class="hero__content container">
-            <span class="hero__label">Saito Forestry Co., Ltd. — Iwate, Japan</span>
-            <h1 class="hero__title fade-up">
-                森から生まれる価値を、<br>
-                <em>次の世代へ。</em>
-            </h1>
-            <p class="hero__sub fade-up" style="transition-delay: 0.15s;">
-                岩手県一関市の林業会社。素材生産・薪・一枚板を<br>
-                25年の現場経験と産地直結でお届けします。
-            </p>
-            <div class="hero__cta fade-up" style="transition-delay: 0.3s;">
-                <a href="slab/" class="btn btn--primary btn--lg">一枚板を探す</a>
-                <a href="firewood/" class="btn btn--outline btn--lg">薪を注文する</a>
-            </div>
-        </div>
-        <div class="scroll-indicator" aria-hidden="true">
-            Scroll
-            <div class="scroll-indicator__line"></div>
-        </div>
-    </section>
-
-    <!-- ============ 強み ============ -->
-    <section id="strengths" class="section" aria-labelledby="strengths-heading">
-        <div class="container">
-            <div class="section-head section-head--center fade-up">
-                <span class="section-head__label">Our Strengths</span>
-                <h2 class="section-head__title" id="strengths-heading">齋藤林業が選ばれる理由</h2>
-                <div class="divider divider--center"></div>
-            </div>
-            <div class="strength-list">
-                <div class="strength-item fade-up">
-                    <span class="strength-item__icon">🌲</span>
-                    <h3 class="strength-item__title">25年の現場目利き</h3>
-                    <p class="strength-item__text">代表・齋藤啓は個人事業主時代から25年以上、岩手の山と向き合ってきました。丸太の段階で素材の質を見極める確かな目で、最適な木材をご提案します。</p>
-                </div>
-                <div class="strength-item fade-up" style="transition-delay:0.1s;">
-                    <span class="strength-item__icon">🔗</span>
-                    <h3 class="strength-item__title">伐採〜製材まで一貫対応</h3>
-                    <p class="strength-item__text">山から製品まで自社で一貫して手掛けることで、中間マージンをカット。産地直結の明瞭会計で、樹種・サイズ・乾燥・送料を個別にご提示します。</p>
-                </div>
-                <div class="strength-item fade-up" style="transition-delay:0.2s;">
-                    <span class="strength-item__icon">📜</span>
-                    <h3 class="strength-item__title">合法木材供給事業者 認定</h3>
-                    <p class="strength-item__text">合法木材供給事業者（G-135）として認定。クリーンウッド法に基づく合法的な木材を供給し、国・自治体のグリーン購入にも対応しています。</p>
-                </div>
-                <div class="strength-item fade-up" style="transition-delay:0.3s;">
-                    <span class="strength-item__icon">🏆</span>
-                    <h3 class="strength-item__title">伐木技術指導員（第1期）</h3>
-                    <p class="strength-item__text">岩手県伐木技術指導員の第1期認定者9名のうちの1人（認定番号：1-4）。チェーンソー伐木の高度な技術と指導力を岩手県から認定されています。</p>
-                </div>
-                <div class="strength-item fade-up" style="transition-delay:0.4s;">
-                    <span class="strength-item__icon">🎯</span>
-                    <h3 class="strength-item__title">コンシェルジュ型の一枚板販売</h3>
-                    <p class="strength-item__text">希望条件（用途・サイズ・樹種・予算）をお聞きし、在庫から最適な一枚板を選定・提案。写真撮影から価格提示まで担当者が直接対応します。</p>
-                </div>
-                <div class="strength-item fade-up" style="transition-delay:0.5s;">
-                    <span class="strength-item__icon">🌱</span>
-                    <h3 class="strength-item__title">15種以上の豊富な樹種</h3>
-                    <p class="strength-item__text">ミズナラ・ケヤキ・クリ・クルミ・ヤマザクラ・トチノキなど広葉樹を中心に、スギ・アカマツ等の針葉樹も含め15種以上をラインナップ。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ 事業一覧 ============ -->
-    <section id="services" class="section bg-cream" aria-labelledby="services-heading">
-        <div class="container">
-            <div class="section-head section-head--center fade-up">
-                <span class="section-head__label">Our Business</span>
-                <h2 class="section-head__title" id="services-heading">事業のご案内</h2>
-                <div class="divider divider--center"></div>
-            </div>
-            <div class="grid-3">
-                <article class="card fade-up">
-                    <div class="card__img-wrap">
-                        <img src="assets/images/forestry.jpg" alt="岩手の森での林業作業風景" class="card__img" loading="lazy">
-                    </div>
-                    <div class="card__body">
-                        <span class="card__num">Business 01</span>
-                        <h3 class="card__title">林業事業</h3>
-                        <p class="card__text">立木の伐採・搬出から間伐・皆伐・造林まで。岩手の山の健康と持続可能な森林経営を支える素材生産業です。</p>
-                        <a href="forestry/" class="card__link">詳しく見る</a>
-                    </div>
-                </article>
-                <article class="card fade-up" style="transition-delay:0.1s;">
-                    <div class="card__img-wrap">
-                        <img src="assets/images/firewood.jpg" alt="岩手産の薪" class="card__img" loading="lazy">
-                    </div>
-                    <div class="card__body">
-                        <span class="card__num">Business 02</span>
-                        <h3 class="card__title">薪販売</h3>
-                        <p class="card__text">ミズナラ・クリなど岩手産広葉樹を中心とした薪。適切に乾燥させた高品質な薪を製造・販売しています。基本販売は1棚28,000円（税別）、岩手県南〜宮城県北エリアへ自社配達。</p>
-                        <a href="firewood/" class="card__link">詳しく見る</a>
-                    </div>
-                </article>
-                <article class="card fade-up" style="transition-delay:0.2s;">
-                    <div class="card__img-wrap">
-                        <img src="assets/images/slab.jpg" alt="工房に並ぶ一枚板" class="card__img" loading="lazy">
-                    </div>
-                    <div class="card__body">
-                        <span class="card__num">Business 03</span>
-                        <h3 class="card__title">一枚板販売（コンシェルジュ）</h3>
-                        <p class="card__text">テーブルや看板など用途をお聞きし、在庫の中から最適な一枚板を選定・提案するコンシェルジュ型の販売スタイル。</p>
-                        <a href="slab/" class="card__link">ご相談はこちら</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ STATEMENT ============ -->
-    <section class="statement" aria-label="企業ビジョン">
-        <div class="container">
-            <p class="statement__text fade-up">
-                丸太の声を聞き、木の可能性を引き出す。<br>
-                私たちは山と人をつなぐ<em>目利き</em>として、<br>
-                岩手の森の価値を届け続けます。
-            </p>
-        </div>
-    </section>
-
-    <!-- ============ お知らせ ============ -->
-    <section id="news" class="section" aria-labelledby="news-heading">
-        <div class="container">
-            <div class="section-head fade-up">
-                <span class="section-head__label">News &amp; Topics</span>
-                <h2 class="section-head__title" id="news-heading">お知らせ</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="news-list fade-up">
-                <div class="news-item">
-                    <span class="news-item__date">2026.08.30</span>
-                    <span class="news-item__tag">イベント</span>
-                    <a href="firewood/#event" class="news-item__title">いちのせき市民フェスタ26にて薪割り体験を開催します。詳細は薪販売ページをご覧ください。</a>
-                </div>
-                <div class="news-item">
-                    <span class="news-item__date">2026.07.02</span>
-                    <span class="news-item__tag">お知らせ</span>
-                    <a href="#" class="news-item__title">ホームページを開設しました。薪・一枚板のご注文はLINEまたはフォームよりお問い合わせください。</a>
-                </div>
-                <div class="news-item">
-                    <span class="news-item__date">2026.07.01</span>
-                    <span class="news-item__tag">一枚板</span>
-                    <a href="#" class="news-item__title">ミズナラ・ケヤキの大判一枚板が入荷しました。コンシェルジュフォームよりご相談ください。</a>
-                </div>
-                <div class="news-item">
-                    <span class="news-item__date">2026.06.15</span>
-                    <span class="news-item__tag">薪</span>
-                    <a href="#" class="news-item__title">2026年シーズンの薪の受付を開始しました。今シーズンはミズナラとナラ薪の在庫が豊富です。</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ Googleマップ ============ -->
-    <section id="access" class="map-section section" aria-labelledby="access-heading">
-        <div class="container">
-            <div class="section-head section-head--center fade-up">
-                <span class="section-head__label">Access</span>
-                <h2 class="section-head__title" id="access-heading">アクセス</h2>
-                <div class="divider divider--center"></div>
-                <p class="section-head__desc">
-                    メイン拠点（土場・作業場）：岩手県一関市狐禅寺川口<br>
-                    ※ 現地引き取りは事前にLINEでのご連絡が必須です。アポなし来場はご遠慮ください。
-                </p>
-            </div>
-            <div class="map-wrap fade-up">
-                <iframe
-                    src="https://www.google.com/maps?q=%E5%B2%A9%E6%89%8B%E7%9C%8C%E4%B8%80%E9%96%A2%E5%B8%82%E7%8B%90%E7%A6%85%E5%AF%BA%E5%B7%9D%E5%8F%A3&output=embed"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="株式会社齋藤林業 所在地マップ（一関市狐禅寺川口）">
-                </iframe>
-            </div>
-            <p class="map-link fade-up">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E5%B2%A9%E6%89%8B%E7%9C%8C%E4%B8%80%E9%96%A2%E5%B8%82%E7%8B%90%E7%A6%85%E5%AF%BA%E5%B7%9D%E5%8F%A3" target="_blank" rel="noopener noreferrer">Googleマップで開く ↗</a>
-            </p>
-        </div>
-    </section>
-
-    <!-- ============ 会社概要 サマリー ============ -->
-    <section id="company" class="section bg-forest-pale" aria-labelledby="company-heading">
-        <div class="container">
-            <div class="section-head section-head--center fade-up">
-                <span class="section-head__label">Company Profile</span>
-                <h2 class="section-head__title" id="company-heading">会社概要</h2>
-                <div class="divider divider--center"></div>
-            </div>
-            <div class="company-table fade-up">
-                <table>
-                    <caption class="visually-hidden">株式会社齋藤林業 会社概要</caption>
-                    <tbody>
-                        <tr>
-                            <th scope="row">会社名</th>
-                            <td>株式会社齋藤林業（SAITO FORESTRY Co., Ltd.）</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">代表取締役</th>
-                            <td>齋藤 啓（さいとう ひらく）</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">設立</th>
-                            <td>2017年5月16日</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">所在地（拠点）</th>
-                            <td><address style="font-style:normal;">〒029-0131 岩手県一関市狐禅寺川口（土場・作業場）</address></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">主な事業</th>
-                            <td>素材生産業（立木伐採・搬出）、造林業、一枚板オーダー販売、薪の製造・販売</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">法人番号</th>
-                            <td>9400001013679</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">所属組合</th>
-                            <td>ノースジャパン素材流通協同組合</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="text-center mt-32 fade-up">
-                <a href="about/" class="btn btn--forest">会社案内を詳しく見る</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ LINE CTA ============ -->
-    <section class="line-cta" aria-label="LINEでのお問い合わせ案内">
-        <div class="container">
-            <h2 class="line-cta__title fade-up">お気軽にLINEでご相談ください</h2>
-            <p class="line-cta__text fade-up">
-                薪のご注文・一枚板のご相談は、LINEが最も早くお繋ぎできます。<br>
-                画像や寸法をそのまま送っていただくことも可能です。
-            </p>
-            <div class="line-cta__row fade-up">
-                <img src="assets/images/line-qr.png" alt="齋藤林業 LINE公式アカウント 友だち追加QRコード" class="line-cta__qr" width="120" height="120" loading="lazy">
-                <a href="https://lin.ee/SUqpcm6" class="btn--line-white" target="_blank" rel="noopener">
-                    <svg width="24" height="24" viewBox="0 0 48 48" fill="#06C755"><path d="M24 4C12.95 4 4 12.28 4 22.5c0 7.08 4.34 13.27 10.8 16.78-.47 1.76-1.7 6.35-1.94 7.34-.3 1.23.45 1.22 1.02.88.44-.26 7.1-4.82 9.98-6.77.7.1 1.41.15 2.14.15 11.05 0 20-8.28 20-18.5S35.05 4 24 4z"/></svg>
-                    LINEで薪について相談する
-                </a>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer id="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="footer-brand__logo">
-                    <img src="assets/images/logo2.png" alt="株式会社齋藤林業 ロゴ" class="site-logo__img" style="height:36px;">
-                    <div class="site-logo__text">
-                        <span class="site-logo__ja">株式会社齋藤林業</span>
-                        <span class="site-logo__en">Saito Forestry Co., Ltd.</span>
-                    </div>
-                </div>
-                <p class="footer-brand__text">
-                    岩手県一関市を拠点に、森から生まれる価値を<br>
-                    産地直結でお届けする林業会社です。<br>
-                    合法木材供給事業者 G-135 認定
-                </p>
-            </div>
-            <nav class="footer-nav" aria-label="サービスナビ">
-                <div class="footer-nav__title">Service</div>
-                <ul>
-                    <li><a href="forestry/">林業事業</a></li>
-                    <li><a href="firewood/">薪販売</a></li>
-                    <li><a href="slab/">一枚板販売</a></li>
-                    <li><a href="gallery/">ギャラリー</a></li>
-                </ul>
-            </nav>
-            <nav class="footer-nav" aria-label="会社情報ナビ">
-                <div class="footer-nav__title">Company</div>
-                <ul>
-                    <li><a href="about/">会社案内</a></li>
-                    <li><a href="news/">お知らせ</a></li>
-                    <li><a href="faq/">よくある質問</a></li>
-                    <li><a href="contact/">お問い合わせ</a></li>
-                </ul>
-            </nav>
-            <nav class="footer-nav" aria-label="問い合わせ">
-                <div class="footer-nav__title">Contact</div>
-                <ul>
-                    <li>
-                        <a href="https://lin.ee/SUqpcm6" target="_blank" rel="noopener">
-                            <span>💬</span> LINEで相談
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contact/">
-                            <span>✉️</span> お問い合わせフォーム
-                        </a>
-                    </li>
-                </ul>
-                <div style="margin-top:20px; font-size:0.78rem; color:rgba(255,255,255,0.45); line-height:1.8;">
-                    〒029-0131<br>
-                    岩手県一関市狐禅寺川口<br>
-                    （現地引き取りは要予約）
-                </div>
-            </nav>
-        </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">&copy; 2026 Saito Forestry Co., Ltd. All rights reserved.</p>
-            <div class="footer-legal">
-                <a href="privacy/">プライバシーポリシー</a>
-            </div>
-        </div>
+    <div class="new-footer__links">
+      <div><span>EXPLORE</span><a href="about/">私たちについて</a><a href="gallery/">ギャラリー</a><a href="faq/">よくある質問</a></div>
+      <div><span>BUSINESS</span><a href="forestry/">林業事業</a><a href="firewood/">薪販売</a><a href="slab/">一枚板販売</a></div>
+      <div><span>CONTACT</span><a href="contact/">お問い合わせ</a><a href="privacy/">プライバシー</a></div>
     </div>
-</footer>
+    <div class="new-footer__bottom"><span>© 2026 SAITO FORESTRY CO., LTD.</span><span>FORESTRY / IWATE / JAPAN</span></div>
+  </footer>
 
-<script src="script.js"></script>
+  <a href="https://lin.ee/SUqpcm6" class="new-line-float" target="_blank" rel="noopener" aria-label="LINEで相談する"><span>LINE</span><b>↗</b></a>
+  <script src="script.js?v=20260903c"></script>
 </body>
 </html>

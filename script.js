@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             const isOpen = hamburger.classList.toggle('active');
             mobileNav.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+            hamburger.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
             document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
@@ -34,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 mobileNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.setAttribute('aria-label', 'メニューを開く');
                 document.body.style.overflow = '';
             });
         });
@@ -42,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // -----------------------------------------------
     // 3. Scroll animations (fade-up)
     // -----------------------------------------------
-    const animEls = document.querySelectorAll('.fade-up, .fade-in');
+    const animEls = document.querySelectorAll('.fade-up, .fade-in, .reveal');
     if (animEls.length) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -54,10 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
         animEls.forEach((el, i) => {
-            el.style.transitionDelay = (i % 4 * 0.1) + 's';
+            if (!el.classList.contains('reveal')) {
+                el.style.transitionDelay = (i % 4 * 0.1) + 's';
+            }
             observer.observe(el);
         });
     }
+
+    // -----------------------------------------------
+    // 3b. Respect reduced-motion preference for video
+    // -----------------------------------------------
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const syncVideoMotion = () => {
+        document.querySelectorAll('video[autoplay]').forEach(video => {
+            if (reducedMotion.matches) {
+                video.pause();
+            } else {
+                video.play().catch(() => {});
+            }
+        });
+    };
+    syncVideoMotion();
+    reducedMotion.addEventListener?.('change', syncVideoMotion);
 
     // -----------------------------------------------
     // 4. Smooth scroll for anchor links
@@ -97,12 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close all
             document.querySelectorAll('.faq-item.open').forEach(openItem => {
                 openItem.classList.remove('open');
+                openItem.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
                 openItem.querySelector('.faq-answer').style.maxHeight = '0';
             });
 
             // Open clicked (if was closed)
             if (!isOpen) {
                 item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
                 answer.style.maxHeight = answer.scrollHeight + 'px';
             }
         });
@@ -199,6 +223,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.textContent = '送信中…';
             }
 
+            if (form.dataset.submitMode === 'external') {
+                form.submit();
+                return;
+            }
+
             setTimeout(() => {
                 showFormMessage(form, 'success', 'お問い合わせを受け付けました。担当者より3営業日以内にご連絡いたします。');
                 form.reset();
@@ -214,6 +243,13 @@ document.addEventListener('DOMContentLoaded', () => {
             field.addEventListener('input', () => field.classList.remove('error'));
         });
     });
+
+    if (new URLSearchParams(window.location.search).get('sent') === '1') {
+        const completedForm = document.querySelector('form[data-validate]');
+        if (completedForm) {
+            showFormMessage(completedForm, 'success', '送信が完了しました。お問い合わせいただきありがとうございます。');
+        }
+    }
 
     function showFormMessage(form, type, message) {
         let msgEl = form.querySelector('.form-message');
@@ -235,6 +271,102 @@ document.addEventListener('DOMContentLoaded', () => {
     if (usageSelect && usageOther) {
         usageSelect.addEventListener('change', () => {
             usageOther.hidden = usageSelect.value !== 'other';
+        });
+    }
+
+    // -----------------------------------------------
+    // 9. Gallery random layout (new order and scale on each visit)
+    // -----------------------------------------------
+    const galleryGrid = document.querySelector('.page-gallery .gallery-grid');
+    if (galleryGrid) {
+        const galleryItems = Array.from(galleryGrid.querySelectorAll('.gallery-item'));
+        const layoutSizes = ['small', 'medium', 'wide', 'tall', 'feature'];
+
+        for (let i = galleryItems.length - 1; i > 0; i -= 1) {
+            const randomIndex = Math.floor(Math.random() * (i + 1));
+            [galleryItems[i], galleryItems[randomIndex]] = [galleryItems[randomIndex], galleryItems[i]];
+        }
+
+        galleryItems.forEach((item, index) => {
+            const sizeOffset = Math.floor(Math.random() * layoutSizes.length);
+            item.dataset.gallerySize = layoutSizes[(index + sizeOffset) % layoutSizes.length];
+            item.style.setProperty('--float-duration', `${(5.4 + Math.random() * 3.2).toFixed(2)}s`);
+            item.style.setProperty('--float-delay', `${(-Math.random() * 5).toFixed(2)}s`);
+            galleryGrid.appendChild(item);
+        });
+    }
+
+    // -----------------------------------------------
+    // 10. Image lightbox (gallery and rack reference)
+    // -----------------------------------------------
+    const zoomTargets = document.querySelectorAll('.page-gallery .gallery-item, img[data-lightbox]');
+    if (zoomTargets.length) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'image-lightbox';
+        lightbox.hidden = true;
+        lightbox.setAttribute('role', 'dialog');
+        lightbox.setAttribute('aria-modal', 'true');
+        lightbox.setAttribute('aria-label', '画像拡大表示');
+        lightbox.innerHTML = `
+            <button class="image-lightbox__close" type="button" aria-label="拡大表示を閉じる">×</button>
+            <figure class="image-lightbox__figure">
+                <img class="image-lightbox__image" src="" alt="">
+                <figcaption class="image-lightbox__caption"></figcaption>
+            </figure>`;
+        document.body.appendChild(lightbox);
+
+        const lightboxImage = lightbox.querySelector('.image-lightbox__image');
+        const lightboxCaption = lightbox.querySelector('.image-lightbox__caption');
+        const closeButton = lightbox.querySelector('.image-lightbox__close');
+        let lastTrigger = null;
+
+        const closeLightbox = () => {
+            if (lightbox.hidden) return;
+            lightbox.classList.remove('is-open');
+            document.body.classList.remove('lightbox-open');
+            window.setTimeout(() => {
+                lightbox.hidden = true;
+                lightboxImage.removeAttribute('src');
+            }, 240);
+            lastTrigger?.focus();
+        };
+
+        const openLightbox = (target) => {
+            const image = target.matches('img') ? target : target.querySelector('img');
+            if (!image) return;
+            const caption = target.closest('.gallery-item')?.querySelector('.gallery-item__caption')?.textContent
+                || target.closest('figure')?.querySelector('figcaption')?.textContent
+                || image.alt;
+            lastTrigger = target;
+            lightboxImage.src = image.currentSrc || image.src;
+            lightboxImage.alt = image.alt;
+            lightboxCaption.textContent = caption.trim();
+            lightbox.hidden = false;
+            document.body.classList.add('lightbox-open');
+            window.requestAnimationFrame(() => lightbox.classList.add('is-open'));
+            closeButton.focus();
+        };
+
+        zoomTargets.forEach(target => {
+            target.classList.add('is-zoomable');
+            target.setAttribute('tabindex', '0');
+            target.setAttribute('role', 'button');
+            target.setAttribute('aria-label', `${target.querySelector?.('img')?.alt || target.alt || '画像'}を拡大表示`);
+            target.addEventListener('click', () => openLightbox(target));
+            target.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openLightbox(target);
+                }
+            });
+        });
+
+        closeButton.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', event => {
+            if (event.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeLightbox();
         });
     }
 

@@ -10,7 +10,7 @@
     <meta property="og:description" content="ケヤキ・ミズナラ・クリ・クルミなど岩手産一枚板。用途・サイズ・樹種・予算をお聞きし担当者が選定・提案するコンシェルジュ型販売。">
     <meta property="og:url" content="https://saitoforestry.github.io/slab/">
     <meta property="og:image" content="https://saitoforestry.github.io/assets/images/slab.jpg">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=20260903c">
 
     <script type="application/ld+json">
     {
@@ -26,18 +26,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
 </head>
-<body>
+<body class="subpage-new page-slab">
 
-<div class="float-line">
-    <a href="https://lin.ee/SUqpcm6" class="float-line__btn" target="_blank" rel="noopener" aria-label="LINEでお問い合わせ">
-        <svg viewBox="0 0 48 48"><path d="M24 4C12.95 4 4 12.28 4 22.5c0 7.08 4.34 13.27 10.8 16.78-.47 1.76-1.7 6.35-1.94 7.34-.3 1.23.45 1.22 1.02.88.44-.26 7.1-4.82 9.98-6.77.7.1 1.41.15 2.14.15 11.05 0 20-8.28 20-18.5S35.05 4 24 4z"/></svg>
-    </a>
-    <span class="float-line__label">LINE</span>
-</div>
+<a href="https://lin.ee/SUqpcm6" class="new-line-float" target="_blank" rel="noopener" aria-label="LINEで相談する"><span>LINE</span><b>↗</b></a>
 
 <header id="header" style="background:rgba(26,58,42,0.96); backdrop-filter:blur(12px);">
     <div class="container">
-        <a href="/" class="site-logo"><img src="../assets/images/logo2.png" alt="株式会社齋藤林業 ロゴ" class="site-logo__img" style="height:36px;"><div class="site-logo__text"><span class="site-logo__ja">株式会社齋藤林業</span><span class="site-logo__en">Saito Forestry Co., Ltd.</span></div></a>
+        <a href="/" class="site-logo"><img src="../assets/images/logo2.png" alt="株式会社齋藤林業 ロゴ" class="site-logo__img" style="height:36px;"><div class="site-logo__text"><span class="site-logo__ja">齋藤林業</span><span class="site-logo__en">SAITO FORESTRY</span></div></a>
         <nav id="gnav"><ul><li><a href="/about/">会社案内</a></li><li><a href="/forestry/">林業事業</a></li><li><a href="/firewood/">薪販売</a></li><li><a href="/slab/" aria-current="page">一枚板</a></li><li><a href="/gallery/">ギャラリー</a></li><li><a href="/contact/" class="btn-line"><svg width="16" height="16" viewBox="0 0 48 48" fill="white"><path d="M24 4C12.95 4 4 12.28 4 22.5c0 7.08 4.34 13.27 10.8 16.78-.47 1.76-1.7 6.35-1.94 7.34-.3 1.23.45 1.22 1.02.88.44-.26 7.1-4.82 9.98-6.77.7.1 1.41.15 2.14.15 11.05 0 20-8.28 20-18.5S35.05 4 24 4z"/></svg>お問い合わせ</a></li></ul></nav>
         <button class="hamburger" id="hamburger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
     </div>
@@ -48,6 +43,7 @@
 
 <main>
     <div class="page-hero" style="background-image:url('../assets/images/slab.jpg');">
+        <video class="subpage-hero-video" autoplay muted loop playsinline preload="metadata" poster="../assets/images/poster-tile-slab.jpg"><source src="../assets/video/tile-slab.mp4" type="video/mp4"></video>
         <div class="container page-hero__content">
             <span class="page-hero__label">Slab Wood — Concierge Style</span>
             <h1 class="page-hero__title">無垢一枚板（加工前）<br><span style="font-size:0.65em; font-weight:300; opacity:0.85;">コンシェルジュ販売</span></h1>
@@ -92,9 +88,20 @@
                     </p>
                 </div>
                 <div class="fade-up" style="transition-delay:0.15s;">
-                    <img src="../assets/images/slab.jpg" alt="製材後の無垢一枚板（加工前）が並ぶ様子" style="border-radius:12px; box-shadow:var(--shadow-lg);">
+                    <img src="../assets/images/photo-log-cross-section.jpg" alt="製材前の原木に現れた個性的な断面" style="border-radius:12px; box-shadow:var(--shadow-lg);">
                     <p style="font-size:0.76rem; color:var(--text-muted); margin-top:10px; text-align:center;">※画像はイメージです。実際の在庫・木目・サイズとは異なる場合があります。</p>
                 </div>
+            </div>
+
+            <div class="slab-image-pair fade-up" aria-label="一枚板の原木と商品イメージ">
+                <figure>
+                    <img src="../assets/images/photo-log-yard.jpg" alt="齋藤林業の土場に並ぶ一枚板用の原木" loading="lazy" data-lightbox>
+                    <figcaption><span>FROM THE LOG YARD</span>土場で一本ずつ見極める、個性豊かな原木</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/images/slab.jpg" alt="無垢一枚板の商品イメージ。クリックで拡大表示" loading="lazy" data-lightbox>
+                    <figcaption><span>PRODUCT IMAGE</span>無垢一枚板 ※商品イメージ</figcaption>
+                </figure>
             </div>
         </div>
     </section>
@@ -260,7 +267,10 @@
             </div>
 
             <div class="form-section fade-up" style="max-width:800px; margin:0 auto;">
-                <form id="slab-form" data-validate action="#" method="post">
+                <form id="slab-form" data-validate data-submit-mode="external" action="https://formsubmit.co/saitoforestry.jp@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="【齋藤林業HP】一枚板コンシェルジュ相談">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://saitoforestry.github.io/slab/?sent=1#form">
 
                     <div class="form-group">
                         <label class="form-label" for="slab-usage">用途 <span class="required">必須</span></label>
@@ -383,32 +393,19 @@
         </div>
     </section>
 
-    <section class="line-cta">
-        <div class="container">
-            <h2 class="line-cta__title fade-up">LINEで直接ご相談も歓迎です</h2>
-            <p class="line-cta__text fade-up">フォームより気軽に、写真や寸法をそのまま送ってご相談いただけます。</p>
-            <div class="line-cta__row fade-up">
-                <img src="../assets/images/line-qr.png" alt="齋藤林業 LINE公式アカウント 友だち追加QRコード" class="line-cta__qr" width="120" height="120" loading="lazy">
-                <a href="https://lin.ee/SUqpcm6" class="btn--line-white" target="_blank" rel="noopener">
-                    <svg width="24" height="24" viewBox="0 0 48 48" fill="#06C755"><path d="M24 4C12.95 4 4 12.28 4 22.5c0 7.08 4.34 13.27 10.8 16.78-.47 1.76-1.7 6.35-1.94 7.34-.3 1.23.45 1.22 1.02.88.44-.26 7.1-4.82 9.98-6.77.7.1 1.41.15 2.14.15 11.05 0 20-8.28 20-18.5S35.05 4 24 4z"/></svg>
-                    LINE で問い合わせる
-                </a>
-            </div>
-        </div>
-    </section>
 </main>
 
 <footer id="footer">
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-brand"><div class="footer-brand__logo"><img src="../assets/images/logo2.png" alt="株式会社齋藤林業 ロゴ" class="site-logo__img" style="height:36px;"><div class="site-logo__text"><span class="site-logo__ja">株式会社齋藤林業</span><span class="site-logo__en">Saito Forestry Co., Ltd.</span></div></div><p class="footer-brand__text">岩手県一関市を拠点に、森から生まれる価値を産地直結でお届けする林業会社。合法木材供給事業者 G-135 認定</p></div>
+            <div class="footer-brand"><div class="footer-brand__logo"><img src="../assets/images/logo2.png" alt="株式会社齋藤林業 ロゴ" class="site-logo__img" style="height:36px;"><div class="site-logo__text"><span class="site-logo__ja">株式会社齋藤林業</span><span class="site-logo__en">Saito Forestry Co., Ltd.</span></div></div><p class="footer-brand__text">岩手県一関市を拠点に、森から生まれる価値を産地直結でお届けする林業会社。<a class="certification-link" href="https://www.goho-wood.jp/nintei_system/user/list.php?group_id=74" target="_blank" rel="noopener noreferrer">合法木材供給事業者 G-135 認定 ↗</a></p></div>
             <nav class="footer-nav"><div class="footer-nav__title">Service</div><ul><li><a href="/forestry/">林業事業</a></li><li><a href="/firewood/">薪販売</a></li><li><a href="/slab/">一枚板販売</a></li><li><a href="/gallery/">ギャラリー</a></li></ul></nav>
             <nav class="footer-nav"><div class="footer-nav__title">Company</div><ul><li><a href="/about/">会社案内</a></li><li><a href="/faq/">よくある質問</a></li><li><a href="/contact/">お問い合わせ</a></li></ul></nav>
-            <nav class="footer-nav"><div class="footer-nav__title">Contact</div><ul><li><a href="https://lin.ee/SUqpcm6" target="_blank" rel="noopener"><span>💬</span> LINEで相談</a></li><li><a href="/contact/"><span>✉️</span> お問い合わせフォーム</a></li></ul></nav>
+            <nav class="footer-nav"><div class="footer-nav__title">Contact</div><ul><li><a href="/contact/">お問い合わせフォーム</a></li></ul></nav>
         </div>
         <div class="footer-bottom"><p class="footer-copy">&copy; 2026 Saito Forestry Co., Ltd. All rights reserved.</p><div class="footer-legal"><a href="/privacy/">プライバシーポリシー</a></div></div>
     </div>
 </footer>
-<script src="../script.js"></script>
+<script src="../script.js?v=20260903c"></script>
 </body>
 </html>
