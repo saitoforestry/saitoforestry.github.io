@@ -7,7 +7,7 @@
     <meta name="description" content="齋藤林業へのお問い合わせ。薪のご購入・一枚板のご相談・林業事業へのご依頼は、LINEまたはお問い合わせフォームからお気軽にご連絡ください。">
     <link rel="canonical" href="https://saitoforestry.github.io/contact/">
     <meta property="og:title" content="お問い合わせ | 株式会社齋藤林業">
-    <link rel="stylesheet" href="../style.css?v=20260903c">
+    <link rel="stylesheet" href="../style.css?v=20260903d">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://saitoforestry.github.io/"},{"@type":"ListItem","position":2,"name":"お問い合わせ","item":"https://saitoforestry.github.io/contact/"}]}</script>
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
@@ -65,17 +65,20 @@
                         <input class="form-input" type="text" id="contact-name" name="name" placeholder="例：山田 太郎" required autocomplete="name">
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="contact-email">メールアドレス <span class="optional">任意</span></label>
-                            <input class="form-input" type="email" id="contact-email" name="email" placeholder="example@mail.com" autocomplete="email">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="contact-tel">電話番号 <span class="optional">任意</span></label>
-                            <input class="form-input" type="tel" id="contact-tel" name="tel" placeholder="090-0000-0000" autocomplete="tel">
+                    <div class="form-group form-group--contact-channel" data-contact-channel-group>
+                        <p class="form-label">ご連絡先 <span class="required">いずれか必須</span></p>
+                        <p class="form-help">メールアドレスまたは電話番号のどちらか一方をご入力ください。</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label form-label--field" for="contact-email">メールアドレス</label>
+                                <input class="form-input" type="email" id="contact-email" name="email" placeholder="example@mail.com" autocomplete="email" data-contact-channel>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label form-label--field" for="contact-tel">電話番号</label>
+                                <input class="form-input" type="tel" id="contact-tel" name="tel" placeholder="090-0000-0000" autocomplete="tel" data-contact-channel>
+                            </div>
                         </div>
                     </div>
-                    <p style="font-size:0.78rem; color:var(--text-muted); margin-top:-16px; margin-bottom:24px;">※ メールアドレスまたは電話番号のいずれかをご記入ください。</p>
 
                     <div class="form-group">
                         <label class="form-label" for="contact-message">お問い合わせ内容 <span class="required">必須</span></label>
@@ -125,6 +128,6 @@
         <div class="footer-bottom"><p class="footer-copy">&copy; 2026 Saito Forestry Co., Ltd. All rights reserved.</p><div class="footer-legal"><a href="/privacy/">プライバシーポリシー</a></div></div>
     </div>
 </footer>
-<script src="../script.js?v=20260903c"></script>
+<script src="../script.js?v=20260903d"></script>
 </body>
 </html>

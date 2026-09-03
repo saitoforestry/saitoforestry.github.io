@@ -192,14 +192,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Check required fields
             form.querySelectorAll('[required]').forEach(field => {
-                const val = field.value.trim();
-                if (!val) {
+                let isEmpty = false;
+                if (field.type === 'checkbox') {
+                    isEmpty = !field.checked;
+                } else if (field.type === 'radio') {
+                    isEmpty = !form.querySelector(`input[type="radio"][name="${CSS.escape(field.name)}"]:checked`);
+                } else {
+                    isEmpty = !field.value.trim();
+                }
+
+                if (isEmpty) {
                     field.classList.add('error');
                     errors.push(field.name || 'field');
                 } else {
                     field.classList.remove('error');
                 }
             });
+
+            // Contact page: an email address or phone number is required.
+            const contactChannels = [...form.querySelectorAll('[data-contact-channel]')];
+            if (contactChannels.length && !contactChannels.some(field => field.value.trim())) {
+                contactChannels.forEach(field => field.classList.add('error'));
+                errors.push('contact-channel');
+            }
 
             // Email format
             const emailFields = form.querySelectorAll('input[type="email"]');
@@ -211,12 +226,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (errors.length > 0) {
-                showFormMessage(form, 'error', '入力に不備があります。必須項目をご確認ください。');
+                const message = errors.includes('contact-channel')
+                    ? 'メールアドレスまたは電話番号のどちらか一方をご入力ください。'
+                    : '入力に不備があります。必須項目をご確認ください。';
+                showFormMessage(form, 'error', message);
                 form.querySelector('.error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }
 
-            // Simulate success (replace with actual API call)
+            // Lock the submit button while the external form service processes the request.
             const submitBtn = form.querySelector('[type="submit"]');
             if (submitBtn) {
                 submitBtn.disabled = true;
@@ -240,14 +258,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Remove error state on input
         form.querySelectorAll('input, select, textarea').forEach(field => {
-            field.addEventListener('input', () => field.classList.remove('error'));
+            field.addEventListener('input', () => {
+                field.classList.remove('error');
+                if (field.matches('[data-contact-channel]') && field.value.trim()) {
+                    form.querySelectorAll('[data-contact-channel]').forEach(channel => channel.classList.remove('error'));
+                }
+            });
         });
     });
 
     if (new URLSearchParams(window.location.search).get('sent') === '1') {
         const completedForm = document.querySelector('form[data-validate]');
         if (completedForm) {
-            showFormMessage(completedForm, 'success', '送信が完了しました。お問い合わせいただきありがとうございます。');
+            const formSection = completedForm.closest('.form-section');
+            const isContactPage = document.body.classList.contains('page-contact');
+            const heading = isContactPage ? 'お問い合わせを送信しました' : '送信が完了しました';
+            const detail = isContactPage
+                ? 'お問い合わせいただきありがとうございます。内容を確認のうえ、3営業日以内を目安にご連絡いたします。'
+                : 'お問い合わせいただきありがとうございます。内容を確認のうえ、担当者よりご連絡いたします。';
+            if (formSection) {
+                formSection.innerHTML = `
+                    <div class="form-success-panel" role="status" aria-live="polite">
+                        <span class="form-success-panel__icon" aria-hidden="true">✓</span>
+                        <p class="form-success-panel__label">Message Sent</p>
+                        <h2 class="form-success-panel__title">${heading}</h2>
+                        <p class="form-success-panel__text">${detail}</p>
+                        <div class="form-success-panel__actions">
+                            <a class="btn btn--forest" href="/">ホームへ戻る</a>
+                            <a class="form-success-panel__again" href="${location.pathname}">続けて問い合わせる</a>
+                        </div>
+                    </div>`;
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         }
     }
 

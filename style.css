@@ -2594,7 +2594,38 @@ h1, h2, h3, h4 {
 .subpage-new .form-input, .subpage-new .form-select, .subpage-new .form-textarea { min-height: 54px; padding: 14px 16px; background: #efeee7; border: 1px solid #d0cec5; border-radius: 8px; color: #171a17; }
 .subpage-new .form-input:focus, .subpage-new .form-select:focus, .subpage-new .form-textarea:focus { border-color: #333933; box-shadow: 0 0 0 3px rgba(24,35,29,.08); }
 .subpage-new .radio-item span { border-radius: 8px; }
-.subpage-new .required { background: #262b27; }
+.subpage-new .form-label .required {
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 2px 8px;
+    background: #f4e8e4;
+    border: 1px solid #dfc8c0;
+    border-radius: 999px;
+    color: #87483c;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: .06em;
+    vertical-align: 1px;
+}
+.subpage-new .form-label--field { color: #666c66; font-size: 10px; }
+.subpage-new .form-help { margin: -3px 0 14px; color: #70756f; font-size: 11px; line-height: 1.8; }
+.subpage-new .form-group--contact-channel { padding: 20px; background: #f4f3ed; border-radius: 12px; }
+.subpage-new .form-group--contact-channel .form-row { margin-bottom: -28px; }
+.form-success-panel { padding: clamp(30px, 6vw, 70px) 20px; text-align: center; }
+.form-success-panel__icon { display: grid; place-items: center; width: 58px; height: 58px; margin: 0 auto 25px; border: 1px solid #829184; border-radius: 50%; color: #294432; font: 300 25px/1 'Montserrat',sans-serif; }
+.form-success-panel__label { margin-bottom: 16px; color: #70776f; font: 500 10px/1.4 'Montserrat',sans-serif; letter-spacing: .18em; text-transform: uppercase; }
+.form-success-panel__title { color: #182019; font-family: 'Noto Serif JP',serif; font-size: clamp(24px, 4vw, 38px); font-weight: 400; line-height: 1.5; }
+.form-success-panel__text { max-width: 520px; margin: 20px auto 0; color: #626862; font-size: 13px; line-height: 2; }
+.form-success-panel__actions { display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 38px; }
+.form-success-panel__again { color: #354137; font-size: 11px; letter-spacing: .05em; text-underline-offset: 4px; }
+
+@media (max-width: 640px) {
+    .subpage-new .form-group--contact-channel { padding: 18px 14px; }
+    .form-success-panel__actions { flex-direction: column; gap: 18px; }
+}
 
 /* FAQ / knowledge accordions */
 .subpage-new .faq-list, .subpage-new .kb-list { border-top: 1px solid #c8c7bf; }
